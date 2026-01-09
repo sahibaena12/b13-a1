@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beginner Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= BASIC RESET ================= */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter', sans-serif;
+    }
+
+    body{
+      color:#0f172a;
+      background:#ffffff;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar{
+     display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 80px;
+      background:#ffffff;
+
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+    }
+
+    .menu{
+      display:flex;
+      gap:30px;
+      font-weight:500;
+    }
+
+    .nav-btn{
+      padding:10px 18px;
+      background:#22c55e;
+      color:#ffffff;
+      border-radius:6px;
+      font-weight:600;
+    }
+
+    /* ================= BANNER / HERO ================= */
+    .banner{
+      width:100%;
+      /*height:90vh;*/
+      height:calc(100vh - 80px);
+      background:url(hero-bg.png) center/cover no-repeat;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .banner::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(2,6,23,0.7);
+    }
+
+    .banner-content{
+      position:relative;
+      z-index:1;
+      color:#ffffff;
+      max-width:800px;
+      padding:20px;
+    }
+
+    .banner-content h1{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .banner-content h1 span{
+      color:#22c55e;
+    }
+
+    .banner-content p{
+      font-size:16px;
+      color:#e5e7eb;
+      margin-bottom:30px;
+    }
+
+    .banner-buttons{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+    }
+
+    .btn{
+      padding:12px 22px;
+      border-radius:6px;
+      font-weight:600;
+      display:inline-block;
+    }
+
+    .btn-green{
+      background:#22c55e;
+      color:#ffffff;
+    }
+
+    .btn-outline{
+      border:1px solid #10d220;
+      color:#34ea10;
+      background:transparent;
+    }
+
+    /* ================= NOTE SECTION ================= */
+    .section{
+      padding:80px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#64748b;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:30px;
+    }
+
+    .card{
+      background:#ffffff;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+
+    .icon-box{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#ef4304;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 15px;
+    }
+
+    .icon-box img{
+      width:28px;
+    }
+
+    .card h4{
+      margin-bottom:8px;
+    }
+
+    .card p{
+      font-size:14px;
+      color:#64748b;
+    }
+
+    /* ================= SECOND BRAIN ================= */
+    .second-brain{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .second-brain img{
+      width:100%;
+    }
+
+    .second-brain h2{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .second-brain p{
+      color:#64748b;
+      margin-bottom:20px;
+    }
+
+    .second-brain ul{
+      list-style:none;
+    }
+
+    .second-brain li{
+      margin-bottom:12px;
+    }
+
+    .second-brain li::before{
+      content:"✔";
+      color:#22c55e;
+      margin-right:10px;
+    }
+
+    /* ================= EARLY ACCESS ================= */
+    .early-access{
+      background:#f8fafc;
+      padding:80px;
+      text-align:center;
+      border-radius:12px;
+    }
+
+    .early-access h2{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .early-access p{
+      color:#64748b;
+      margin-bottom:15px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      margin-top:80px;
+      padding:40px 80px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    .footer-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+  .social{
+  display:flex;
+  gap:14px;
+  justify-content:flex-end;
+}
+
+
+
+.icon{
+  width:18px;
+  height:18px;
+  display:inline-block;
+  color:#94a3b8;
+}
+
+.icon svg{
+  width:100%;
+  height:100%;
+  fill:currentColor;
+}
+
+.icon:hover{
+  color:#22c55e;
+}
+
+
+    hr{
+      border:none;
+      border-top:1px solid #1e293b;
+      margin:20px 0;
+    }
+
+    .copyright{
+      text-align:center;
+      font-size:14px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:900px){
+      .navbar,.section,footer{
+        padding:40px;
+      }
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+      .second-brain{
+        grid-template-columns:1fr;
+      }
+      .banner-content h1{
+        font-size:36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logo-navbar.png" height="28" alt="Logo">
+    
+  </div>
+
+  <div class="menu">
+    <a href="#">Features</a>
+    <a href="#">How It Works</a>
+    <a href="#">Why It's Different</a>
+  </div>
+
+  <a href="#" class="nav-btn">Get Early Access</a>
+</div>
+
+<!-- ============ BANNER ============ -->
+<section class="banner">
+  <div class="banner-content">
+    <h1>Structured Thinking,<br><span>Not Just Note‑Taking.</span></h1>
+    <p>A private space to store notes, links, and summaries that help you think clearly and connect ideas.</p>
+
+    <div class="banner-buttons">
+      <a href="#" class="btn btn-green">Start Building Your Vault</a>
+      <a href="#" class="btn btn-outline">See How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTE SECTION ============ -->
+<section class="section">
+  <div class="section-title">
+    <h2>Notes Don't Fail, Structure Does</h2>
+    <p>Your tools were not designed for how learning really works.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon-box"><img src="Vector.png"></div>
+      <h4>Scattered Notes</h4>
+      <p>Notes across many apps with no connection.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><img src="Bookmarks.png"></div>
+      <h4>Bookmark Overload</h4>
+      <p>Saved links you never revisit.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><img src="Brain.png"></div>
+      <h4>No Idea Connection</h4>
+      <p>Insights remain isolated.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon-box"><img src="Info.png"></div>
+      <h4>Forgetting Learning</h4>
+      <p>No system to retain knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECOND BRAIN ============ -->
+<section class="section">
+  <div class="second-brain">
+    <img src="knowledge.png" alt="Brain">
+
+    <div>
+      <p class="section-msg">THE SOLUTION</p>
+      <h2>Your Second Brain</h2>
+      <p>A structured thinking system where notes and ideas connect automatically.</p>
+
+      <ul>
+        <li>Structured capture from day one</li>
+        <li>Automatic idea linking</li>
+        <li>Reflection-based learning</li>
+        <li>Instant search</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EARLY ACCESS ============ -->
+<section class="section">
+  <div class="early-access">
+    <h2>Ready To Think More Clearly?</h2>
+    <p>Join thousands building their personal knowledge vault.</p>
+    <p>No credit card required.</p>
+
+    <a href="#" class="btn btn-green">🚀 Get Early Access</a>
+
+    <p style="margin-top:15px;">Free during early access</p>
+    <p>Cancel anytime</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+ <div class="social"> social link <p>
+
+  <a href="#" class="icon">
+    <!-- Facebook -->
+    <svg viewBox="0 0 24 24">
+      <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+    </svg>
+  </a>
+
+  <a href="#" class="icon">
+    <!-- LinkedIn -->
+    <svg viewBox="0 0 24 24">
+      <path d="M22.23 0H1.77C.79 0 0 .774 0 1.727v20.545C0 23.227.79 24 1.77 24h20.46C23.21 24 24 23.227 24 22.273V1.727C24 .774 23.21 0 22.23 0zM7.09 20.452H3.56V9h3.53v11.452zM5.325 7.433c-1.13 0-2.05-.926-2.05-2.065 0-1.138.92-2.064 2.05-2.064s2.05.926 2.05 2.064c0 1.139-.92 2.065-2.05 2.065zM20.452 20.452h-3.53v-5.569c0-1.328-.026-3.037-1.85-3.037-1.85 0-2.134 1.445-2.134 2.94v5.666h-3.53V9h3.39v1.561h.048c.472-.9 1.624-1.85 3.342-1.85 3.57 0 4.23 2.35 4.23 5.407v6.334z"/>
+    </svg>
+  </a>
+
+  <a href="#" class="icon">
+    <!-- Instagram -->
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.318.975.975 1.256 2.242 1.318 3.608.058 1.266.07 1.646.07 4.84s-.012 3.574-.07 4.84c-.062 1.366-.343 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.343-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608C2.175 15.737 2.163 15.357 2.163 12s.012-3.574.07-4.84c.062-1.366.343-2.633 1.318-3.608C4.526 2.576 5.793 2.295 7.159 2.233 8.425 2.175 8.805 2.163 12 2.163z"/>
+    </svg>
+  </a>
+</div>
+
+
+  <hr>
+
+  <div class="copyright">
+    © 2026 Personal Knowledge Vault. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
