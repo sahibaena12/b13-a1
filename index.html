@@ -61,7 +61,6 @@
     /* ================= BANNER / HERO ================= */
     .banner{
       width:100%;
-      /*height:90vh;*/
       height:calc(100vh - 80px);
       background:url(./project/hero-bg.png) center/cover no-repeat;
       position:relative;
@@ -70,7 +69,42 @@
       justify-content:center;
       text-align:center;
     }
+    .early-access-badge:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px); 
+  transition: all 0.2s ease;
+}
+.badge-container {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 20px;
+}
 
+.early-access-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.863); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: #a0a0a0;
+  padding: 6px 16px;
+  border-radius: 50px; 
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(4px); /
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #4ade80; 
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.6); 
+}
     .banner::after{
       content:"";
       position:absolute;
@@ -326,9 +360,15 @@
 <!-- ============ BANNER ============ -->
 <section class="banner">
   <div class="banner-content">
+    <div class="badge-container">
+  <span class="early-access-badge">
+    <span class="dot"></span>
+    Early Access Now Open
+  </span>
+</div>
     <h1>Structured Thinking,<br><span>Not Just Note‑Taking.</span></h1>
     <p>A private space to store notes, links, and summaries -desinged to
-        help you think clearly ,connect ideas,and turn learning into long-term knowledge.</p>
+        help you think clearly ,connect ideas,and turn learning into long-term knowledge++.</p>
 
     <div class="banner-buttons">
       <a href="#" class="btn btn-green">Start Building Your Vault</a>
@@ -348,25 +388,31 @@
     <div class="card">
       <div class="icon-box"><img src="./project/Vector.png"></div>
       <h4>Scattered Notes</h4>
-      <p>Notes across many apps with no connection.</p>
+      <p>Your ideas live in 10 Different app.
+        none of them are connected.
+      </p>
     </div>
 
     <div class="card">
       <div class="icon-box"><img src="./project/Bookmarks.png"></div>
       <h4>Bookmark Overload</h4>
-      <p>Saved links you never revisit.</p>
+      <p>Hundred of saved links you'll never
+         revisit of remember.</p>
     </div>
 
     <div class="card">
       <div class="icon-box"><img src="./project/Brain.png"></div>
       <h4>No Idea Connection</h4>
-      <p>Insights remain isolated.</p>
+      <p>Insights remain isolated,never
+        building into bigger understanding.
+      </p>
     </div>
 
     <div class="card">
       <div class="icon-box"><img src="./project/Info.png"></div>
       <h4>Forgetting Learning</h4>
-      <p>No system to retain knowledge.</p>
+      <p> knowledge fades because there's 
+        no system to retain it.</p>
     </div>
   </div>
 </section>
@@ -378,14 +424,19 @@
 
     <div>
       <p class="section-msg">THE SOLUTION</p>
-      <h2>Your Second Brain</h2>
-      <p>A structured thinking system where notes and ideas connect automatically.</p>
+      <h2>Your Second Brain,
+        Structure By Design.
+      </h2>
+      <p>Personal knowledge Vault isn't another note taking app.
+        It's thinking environment where every note,link and  summary 
+        becomes part of an interconnected web of understanding.
+      </p>
 
       <ul>
-        <li>Structured capture from day one</li>
-        <li>Automatic idea linking</li>
-        <li>Reflection-based learning</li>
-        <li>Instant search</li>
+        <li> Capture ideas with Structure built-in form day one</li>
+        <li>Connect related concepts automatically</li>
+        <li>Build lasting knowledge through reflection prompts</li>
+        <li>Find anything instantly with semantic search</li>
       </ul>
     </div>
   </div>
@@ -395,10 +446,12 @@
 <section class="section">
   <div class="early-access">
     <h2>Ready To Think More Clearly?</h2>
-    <p>Join thousands building their personal knowledge vault.</p>
+    <p>Join thousands building their personal knowledge vault.
+      start free,no credit card request.
+    </p>
     <p>No credit card required.</p>
 
-    <a href="#" class="btn btn-green">🚀 Get Early Access </a>
+    <a href="#" class="btn btn-green">Get Early Access -> </a>
 
     <p style="margin-top:15px;">Free during early access * No credit card needed</p>
    
