@@ -80,7 +80,23 @@
   justify-content: center; 
   margin-bottom: 20px;
 }
+.btn-early-access {
+  background-color: #22c55e; 
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px; 
+  text-decoration: none; 
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background 0.3s ease;
+}
 
+.btn-early-access:hover {
+  background-color: #16a34a; 
+  cursor: pointer;
+}
 .early-access-badge {
   display: inline-flex;
   align-items: center;
@@ -94,6 +110,7 @@
   font-weight: 500;
   backdrop-filter: blur(4px); /
 }
+ 
 
 .dot {
   height: 8px;
@@ -140,7 +157,23 @@
       justify-content:center;
       gap:15px;
     }
+    
+.btn-early-access {
+  background-color: #22c55e; 
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px; 
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background 0.3s ease;
+}
 
+.btn-early-access:hover {
+  background-color: #16a34a; 
+  cursor: pointer;
+}
     .btn{
       padding:12px 22px;
       border-radius:6px;
@@ -354,7 +387,9 @@
     <a href="#">Why It's Different</a>
   </div>
 
-  <a href="#" class="nav-btn">Get Early Access</a>
+  <a href="/signup" class="btn-early-access">
+  Get Early Access 
+</a>
 </div>
 
 <!-- ============ BANNER ============ -->
@@ -451,8 +486,10 @@
     </p>
     <p>No credit card required.</p>
 
-    <a href="#" class="btn btn-green">Get Early Access -> </a>
-
+    
+<a href="/signup" class="btn-early-access">
+  Get Early Access <span>&rarr;</span>
+</a>
     <p style="margin-top:15px;">Free during early access * No credit card needed</p>
    
   </div>
